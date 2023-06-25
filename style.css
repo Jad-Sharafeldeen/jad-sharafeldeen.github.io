@@ -1,0 +1,921 @@
+html {
+    width:100%;
+    height: 100%;
+    touch-action: pan-x pan-y;
+    zoom: reset;
+}
+
+body {
+    width:100%;
+    margin: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    background-color: #ffffff;
+
+}
+  .carousel-inner {
+    overflow: hidden;
+    
+  }
+  
+  .carousel-item {
+    animation-name: zoom;
+    object-fit: cover;
+    min-width: 100%;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+  }
+ 
+  
+  @keyframes zoom {
+    from {
+      transform: scale(1);
+      margin-top: 0vh;
+     
+    }
+    to {
+        margin-top: 0vh;
+      transform: scale(1.2);
+     
+    }
+  }
+  
+/* Set the width and height of the scrollbar */
+::-webkit-scrollbar {
+    width: 10px; 
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(0, 59, 0);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(4, 93, 49);
+  }
+
+  .prev,.next{
+    position: absolute;
+    top: 50vh;
+    font-size: 50px;
+    margin: 0 5vh;
+  }
+.next{
+    right: 20%;
+}
+
+
+  
+  .carousel-control-next, .carousel-control-prev{
+    width: fit-content;
+height: fit-content;
+
+  } 
+  
+
+ 
+  header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    
+    transition: 1s;
+}
+.h1{
+    position: absolute;
+    width: fit-content;
+    top: 20vh;
+    left:35vw ;
+    color: #ffffff;
+    z-index: 2;
+}
+.logo {
+    width: 6% ;
+    margin-left: 2%;
+    margin-bottom: 2rem;
+    float: left;
+   
+}
+
+
+
+.row{
+    padding: 0;
+   
+}
+
+.info{
+    color: #ffffff !important;
+}
+
+
+
+
+.contain {
+    position: relative;
+    text-align: center;
+}
+
+
+.atsa {
+    float: right;
+
+    margin-top: 0%;
+
+}
+
+/* copy this */
+.a {
+    padding: 5px 60px !important;
+    display: inline-block;
+    vertical-align: bottom;
+    color: rgb(255, 255, 255);
+    font-size: 15px !important;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+.zoom{
+    position: absolute;
+    left: 40%;
+    width: 100vw;
+    height: 100vh;
+}
+.zoomAll{
+    background-color:white ;
+
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.a:hover {
+    color: rgb(255, 255, 255);
+}
+
+#section-2{
+    background-color: rgb(4, 93, 49);
+height: 20vh;
+display:flex ;
+justify-content: center;
+    align-items: center;
+}
+.goTop{
+    position: fixed;
+    bottom: 0;
+    top: 90vh;
+    z-index: 10;
+right: 4vw;
+}
+.hover-card {
+    position: relative;
+  }
+  
+  .hover-card:hover::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(4, 93, 49);
+    animation: grow 0.3s ease-in-out forwards;
+  }
+
+  .hover-card:hover{
+    animation: grow1 .3s ease-in-out forwards;
+
+    box-shadow:  -1em 1em .4em rgba(0, 0, 0, 0.171);
+  }
+
+  .text{
+
+    width: 80%;
+    text-align: justify;
+    color: white;
+
+  }
+
+  .aboutrows {
+    width: 90%;
+    margin-left: 5rem;
+  }
+
+  @keyframes grow {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes grow1 {
+    from {
+        background-position: left;
+      background-size: 0% 0%;
+    }
+    to {
+        background-position: left;
+
+        background-size: 200% 200%;
+        background-color: rgba(4, 93, 49, 0.548);
+    }
+  }
+  .serviceTitle{
+    width: fit-content;
+    color: #ffffff;
+    font-size: 6rem;
+  }
+.arrowtop{
+    font-size: 5rem;
+    color: rgb(4, 93, 49);
+    display: none;
+}
+/* .arrowtop::before{
+box-shadow:  -.1em .1em .1em .1em rgba(0, 0, 0, 0.171);
+} */
+.serviceicon{
+    color: rgb(4, 93, 49);
+    font-size: 70px;
+    position: absolute;
+    top: 43vh;
+    right: 2vw;
+}
+/* .about{
+    height: 85vh;
+} */
+.about1{
+  
+    background-color: rgb(4, 93, 49);
+}
+.allAboutRow{
+    margin-top: 3%;
+}
+.aboutText{
+    color: #ffffff;
+    font-size: 70px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 6%;
+}
+
+a h4{
+    text-decoration: none;
+    color: #000000;
+}
+
+.a:focus {
+
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+.carosa {
+    
+    width: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    min-height: 100vh;
+    max-height: 100vh;
+    margin-top: 0;
+}
+
+/* copy this */
+.topnav .icon {
+    display: none
+}
+
+/* copy this */
+.nav-colored {
+    margin-top: -1vh;
+    background-color: rgb(4, 93, 49);
+    box-shadow: 0em 1em .4em rgba(0, 0, 0, 0.171);
+}
+
+/* copy this */
+.nav-transperent {
+    margin-top: 0;
+    background-color: transperent;
+}
+.active{
+   margin-top: 1vh;
+}
+
+
+@keyframes fade{
+    from{
+margin-left: -20vw;
+
+    }
+    to{
+      
+    }
+}
+@keyframes fade2{
+    from{
+        opacity:0.1;
+    }
+    to{
+        opacity:1;
+    }
+}
+.fade{
+    animation-fill-mode: forwards;
+    opacity: 1;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+.topnav {
+    margin-top: 2rem;
+}
+
+
+
+
+  
+  @keyframes tracking-in-expand {
+    0% {
+        -webkit-transform: translateY(0);
+                transform: translateY(0);
+        -webkit-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+        text-shadow: none;
+      }
+      100% {
+        -webkit-transform: translateY(-50px);
+                transform: translateY(0px);
+        -webkit-transform-origin: 50% 50%;
+                transform-origin: 50% 50%;
+        text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.192);
+      }
+  }
+  
+
+
+.col {
+    padding: 0%;
+    text-align: center;
+    border: 0px;
+}
+
+img {
+    width: 100%;
+}
+.about{
+    
+    object-fit: cover;
+    height: 100%;
+}
+
+
+
+.mission,.vision,.value{
+width: 8rem;
+height: auto;
+}
+.valueHover{
+    margin-bottom: 0%;
+}
+.contactTitle{
+    color: #ffffff;
+    width: fit-content;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 70PX;
+}
+h3{
+    color: #ffffff;
+    font-size: 3rem;
+}
+.description{
+    color: black;
+    font-size: 25px;
+    height: 20vh;
+   text-align: justify;
+   padding: 0% 100px;
+    
+}
+hr{
+    width: 100%;
+    margin-left: 0%;
+}
+
+.contact{
+    height: 60vh;
+    background-color: #000000da;
+    margin-bottom: 0%;
+    background-image: url(about\ us.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+.contacttext{
+    color: #ffffff;
+}
+footer {
+    margin-top: auto;
+    height: fit-content;
+}
+
+.copyright {
+    margin-top: auto;
+    margin-bottom: auto;
+    display: block;
+    text-align: center;
+    font-size: 1.3rem;
+    color: white;
+    background-color:  #000000;
+    font-weight: 450;
+    margin-bottom: 0;
+    padding-top: 1%;
+    padding-bottom: 1%;
+
+}
+
+
+
+.text-image-section {
+    color: rgb(4, 93, 49);
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 50px;
+   overflow: hidden;
+}
+
+.moon-website {
+    color: white;
+    text-decoration: none;
+
+}
+
+.moon-website:hover {
+    text-decoration: none;
+    color: white;
+
+}
+
+.moon-website:focus {
+    text-decoration: none;
+    color: white;
+}
+
+.moon-website:active {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* laptop version */
+@media only screen and (max-width: 1700px) {
+
+    .arrowtop{
+        font-size: 4.5rem;
+    }
+    .mission,.vision,.value{
+        width: 7rem;
+        height: auto; 
+    }
+    .logo {
+        width: 6%;
+    }
+
+    .atsa {
+        margin-top: 0%;
+    }
+
+    .text{
+
+        width: 80%;
+        text-align: justify;
+        font-size: 1.8rem;
+    
+      }
+
+      .aboutText{
+
+        font-size: 4.2rem;
+    }
+
+
+    .serviceTitle{
+        font-size: 4.2rem;
+      }
+
+
+    .text-image-section {
+        font-size: 3rem;
+    }
+
+    .a {
+        position: flex;
+        align-items: center;
+        padding: 9px 15px 0;
+        font-size: .7em;
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    h4 {
+        font-size: 2rem;
+    }
+
+    h5 {
+        font-size: 1.2rem;
+    }
+
+   
+
+       
+    .serviceicon{
+        
+       
+        top: 25vh;
+  
+    }
+    .description{
+        padding: 0% 80px;
+        font-size: 2rem;
+        height: 28vh;
+    }
+    .copyright {
+        font-size: 1.1rem;
+    }
+
+
+}
+
+/* ipad version */
+@media only screen and (max-width: 992px) {
+
+    header {
+        background-color: rgb(4, 93, 49);
+        box-shadow: 0em 1em .4em rgba(0, 0, 0, 0.171);
+    }
+
+    .hover-card:hover::before {
+        background-color: transparent;
+        animation: none;
+      }
+      .hover-card:hover{
+        animation: none;
+        box-shadow: none;
+          }
+          .mission,.vision,.value{
+            width: 6rem;
+            height: auto; 
+        }
+    .logo {
+        margin-top: 3%;
+        width: 10%;
+    }
+ .row-3{
+    margin-bottom: 2%;
+ }
+    h2 {
+        font-size: 30px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        z-index: 1;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    h5 {
+        font-size: 1.5rem;
+        margin: auto;
+        width: 100%;
+    }
+
+    .contactTitle{
+        font-size: 4rem;
+    }
+
+    .serviceTitle{
+        font-size: 4rem;
+      }
+
+    .text-image-section {
+        font-size: 4rem;
+    }
+
+    hr{
+        width: 80%;
+        margin-left: 20%;
+    }
+    .description{
+        font-size: 2rem;
+        padding: 0 50px;
+        margin-bottom: 5%;
+       }
+    /* copy this */
+    .a:hover {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+    }
+
+    /* copy this */
+    .a:focus {
+        text-decoration: none;
+        color: rgb(250, 250, 250);
+    }
+
+  
+    /* copy this */
+    .topnav .a {
+        display: none;
+    }
+
+    /* copy this */
+    .topnav a.icon {
+        position: absolute;
+        width: fit-content;
+        top: 10%;
+        right: 2rem;
+        font-size: 4rem;
+        display: block;
+        float: right;
+        color: #ffffff ;
+    }
+
+    /* copy this */
+    .topnav.responsive {
+        position: relative;
+
+    }
+
+    /* copy this */
+    .topnav.responsive a.icon {
+        position: fixed;
+        right: 2rem;
+        top: 1%;
+
+    }
+
+    .atsa {
+
+        display: block;
+        /* padding-right: 35%; */
+        width: 100%;
+        padding-top: 0%;
+        justify-content: center;
+        text-align: center;
+        margin-top: 0%;
+        margin-bottom: 0%;
+
+    }
+
+    /* copy this */
+    .topnav.responsive .a {
+        width: fit-content;
+        display: block;
+        padding: 2% 0% 0% 0%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 1.3em;
+
+    }
+
+    .topnav.responsive .atsa {
+        padding-bottom: 0%;
+
+    }
+
+    .topnav {
+
+        margin-top: 0;
+    }
+   
+  
+    .serviceicon{
+         top: 40vh;
+    }
+/* .allAboutRow{
+    height: 50vh;
+} */
+    footer {
+        margin-top: auto;
+        height: fit-content;
+    }
+    .arrowtop{
+        font-size: 4rem;
+    }
+    .copyright {
+        margin-top: 0rem;
+        font-size: 1.4rem;
+        font-weight: 450;
+    }
+    .serviceRow{
+        margin-left: .4%;
+    }
+
+    .text{
+
+        margin-bottom: 5rem;
+    
+      }
+
+}
+
+/* phone version */
+@media only screen and (max-width: 600px) {
+    header {
+        padding-top: 4%;
+
+    }
+    .mission,.vision,.value{
+        width: 4rem;
+        height: auto; 
+    }
+
+     .aboutrows {
+        display: block;
+  width: 80%;
+  margin: auto;
+}
+    
+ .carosa{
+        height:95vh;
+    }
+    .arrowtop{
+        font-size: 3rem;
+    }
+#section-2{
+    height: 10vh;
+}
+    .contain {
+        position: relative;
+        text-align: center;
+    }
+
+
+
+    /* copy this */
+    .logo {
+        margin-top: 0%;
+        width: 9%;
+    }
+
+    .about{
+        
+        object-fit: cover;
+        height: 100%;
+    }
+
+    .text{
+
+        width: 100%;
+        font-size: 1.5rem;
+
+    
+      }
+
+    /* copy this */
+    .topnav .a {
+        display: none;
+    }
+
+    /* copy this */
+    i {
+        top: 0%;
+        right: 0%;
+        width: 50%;
+    }
+
+    /* copy this */
+    .topnav a.icon {
+        position: absolute;
+        width: fit-content;
+
+
+        top: 0.5rem;
+        right: 1rem;
+        font-size: 3rem;
+        display: block;
+        float: right;
+    }
+
+    /* copy this */
+    .topnav.responsive {
+        position: relative;
+    }
+
+    /* copy this */
+    .topnav.responsive a.icon {
+        position: fixed;
+        right: 1rem;
+
+    }
+
+    .atsa {
+
+        display: block;
+        /* padding-right: 35%; */
+        width: 100%;
+        padding-top: 0%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* copy this */
+    .topnav.responsive .atsa {
+        padding-bottom: 0%;
+    }
+
+    /* copy this */
+    .topnav.responsive .a {
+        width: fit-content;
+        display: block;
+        padding: 3% 0% 0% 0%;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: .9em;
+
+    }
+
+   .aboutText{
+    font-size: 30px;
+    margin-bottom: 20%;
+   }
+.serviceTitle{
+    font-size: 30px;
+}
+    .text-block {
+
+
+        font-size: 1.8rem;
+        margin-left: 10vw;
+        margin-top: 22vh;
+
+    }
+
+    h2 {
+        font-size: 2.5rem;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    h3{
+        font-size: 2rem;
+    }
+    .serviceicon{
+        top: 25vh;
+   }
+   .description{
+    font-size: 20px;
+    padding: 0 50px;
+    line-height: 140%;
+    
+   }
+    h4 {
+margin-top: 1vh;
+        font-size: 1.1rem;
+
+    }
+
+    h5 {
+        font-size: 0.8rem;
+
+    }
+
+    .text-image-section {
+        font-size: 3rem;
+    }
+a:hover p:hover{
+    text-decoration: none;
+}
+
+    .media-icons {
+        font-size: 1.5rem !important;
+    }
+    .about {
+        object-fit: cover;
+        aspect-ratio: 1/2;
+        height: 50vh;
+    }
+.prev::before{
+margin-left: 15vw;
+}
+.next{
+    right: 10vw;
+}
+
+      .copyright {
+        font-size: 0.8rem;
+        font-weight: 0.0;
+        margin-bottom: 0;
+        margin-top: 0rem;
+        padding-top: 0%;
+        padding-bottom: 3%;
+    }
+}

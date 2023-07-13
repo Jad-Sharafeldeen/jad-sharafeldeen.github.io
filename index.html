@@ -1,327 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 
 <head>
-  <meta charset="UTF-8">
+    <title>University Acceptance</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url(e587449307fcab0986e92eb007df6e41.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
 
-  <title>
-    
-  </title>
-  <meta name="description"
-    content="">
-  <meta name="keywords"
-    content="">
-  <meta name="author" content="Moon Lines Agency">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        .container {
+            max-width: 500px;
+            padding: 20px;
+            background-color: #f2f2f2;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-  <link rel="canonical" href="https:///" />
-  <!-- Google fonts-->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Oswald:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Pacifico:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
+        h3 {
+            text-align: center;
+        }
 
-  <!-- SimpleLightbox plugin CSS-->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
-  <link rel="icon" href="" type="icon">
-  <link rel="stylesheet" href="style.css">
-  <!-- Google tag (gtag.js) -->
+        .logo {
+            display: block;
+            width: 300px;
+            margin: 0 auto 20px;
+        }
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  <script>
-    function myFunction() {
-      document.getElementById('myTopnav').classList.toggle('responsive');
-    }
- 
-  </script>
+        .form-group {
+            margin-bottom: 20px;
+        }
 
+        label {
+            display: block;
+            font-weight: bold;
+        }
 
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
 
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4c77af;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn-submit:hover {
+            background-color: #45a049;
+        }
+
+        .message {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Media Queries */
+        @media only screen and (max-width: 600px) {
+            .container {
+                max-width: 100%;
+            }
+
+            .logo {
+                width: 200px;
+            }
+        }
+    </style>
 </head>
 
-<body id="top">
-  <header>
-    <div class="topnav " id="myTopnav">
+<body>
+    <div class="container">
+        <img class="logo" src="uni-rostock-1-720x311.webp" alt="Logo">
 
-      <a class="topLogo " href="#top"><img src="KFT Logo png.png" class="logo" alt=""></a>
+        <h3>Congratulations! You have been accepted to a university of Rostock.</h3>
 
+        <p class="message">Please fill out the following information:</p>
 
-      <div class="atsa ">
-        
-       <a class="nav-link class2 a" href="#section-2">Our services</a>
-       <a class="nav-link class3 a" href="#section-8">About us    </a>
-       <a class="nav-link class4 a" href="#contact">  Contact us  </a>
-      </div>
+        <form action="submit.php" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="full-name" required>
+            </div>
 
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="bi bi-justify"></i></a>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
 
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+
+            <div class="form-group">
+                <label for="passport-photo">Upload Passport Photo:</label>
+                <input type="file" id="passport-photo" name="passport-photo" accept="image/*" required>
+            </div>
+
+            <input type="submit" value="Submit" class="btn-submit">
+        </form>
     </div>
-
-
-  </header>
-  <div class="contain">
-
-
-    <section id="section-1">
-      <h1 class="h1">Services for the Food Processing Sector</h1>
-      <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="false" data-bs-wrap="true" data-bs-touch="true" data-bs-keyboard="true">
-       
-        <div class="carousel-inner">
-            <div class="carousel-item active"><img  class="carosa" src="candy.jpg" alt=""></div>
-            <div class="carousel-item"><img  class="carosa" src="juice.jpg" alt=""></div>
-            <div class="carousel-item"><img  class="carosa" src="snacks.jpg" alt=""></div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-            <span class="" aria-hidden="true"><i class="bi bi-arrow-left-circle prev"></i></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-            <span class="" aria-hidden="true"><i class="bi bi-arrow-right-circle next"></i></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
-    </section>
-
-  </div>
-  <section id="section-2">
-<h2 class="serviceTitle">OUR SERVICES</h2>
-  </section>
-<div class="goTop"><a href="#top"><i class="bi bi-arrow-up-square-fill arrowtop"></i></a></div>
-  
-  <section id="section-6">
-    <div class="row ">
-      <div class="row justify-content-center serviceRow">
-        <div class="col col-lg-5 col-md-4 col-sm-9 col-12">
-          <div class="card hover-card ">
-            <a href=""> <img src="services.jpg" alt=""></a>
-     <h3 class="text-image-section">SNACKS</h3>
-     <h4 class="description">We offer various snack-making machines that are used to make chips, bars, and many other popular snacks. </h4>
-      <div class="serviceicon"><i class="bi bi-bug"></i></div>
-    </div>
-    </div>
-      <div class="col col-lg-5 col-md-4 col-sm-9 col-12">
-        <div class="card hover-card ">
-          <a href=""> <img src="services.jpg" alt=""></a>
-          <h3 class="text-image-section">BAKERY</h3>
-          <h4 class="description">We are engaged in manufacturing and exporting an exhaustive range of Bakery Machines, addressing the various requirements of the baking sector.</h4>
-          <div class="serviceicon"><i class="bi bi-bug"></i></div>
-
-           </div>
-      
-    </div>
-   
-      </div>
-     <div class="row justify-content-center serviceRow">
-      <div class="col col-lg-5 col-md-4 col-sm-9 col-12">
-         <div class="card hover-card ">
-          <a href=""> <img src="services.jpg" alt=""></a>
-       
-        <h3 class="text-image-section">CONFECTIONERY</h3>
-        <h4 class="description">We generate solutions for the confectionery industry with significant customer benefits. Our machines are uniquely created to satisfy your needs in terms of production and resource efficiency. </h4>
-        <div class="serviceicon"><i class="bi bi-bug"></i></div>
-
-         </div>
-      
-    </div>
-  
-    <div class="col col-lg-5 col-md-4 col-sm-9 col-12">
-      <div class="card hover-card ">
-        <a href=""> <img src="services.jpg" alt=""></a>
-        <h3 class="text-image-section">DRINKS</h3>
-        <h4 class="description">We provide a full range of Beverage machinery with High technology and excellent quality. Highly efficient lines for juice, soft drinks, beer, wine, dairy, and food sectors. </h4>
-        <div class="serviceicon"><i class="bi bi-cup-straw"></i></div>
-
-         </div>
-    
-  </div>
-     </div>
-
-    </div>
-  </section>
- 
-  <section id="section-8">
-<div class="row allAboutRow">
-  <div class="col col-lg6 col-md-6 col-sm-12 col-12 about1">
-    <h2 class="aboutText">ABOUT US!</h2>
-    <div class="parentrow">
-   <div class="row aboutrows">
-<!-- <div class="col col-lg-6 col-md-3 col-sm-3 col-3"></div> -->
-<div  class="col col-lg-5 col-md-5 col-sm-5 col-12 missionHover" >
-  
-  <div class="col col-lg-5 col-md-3 col-sm-5 col-12"><img src="mission.png" class="mission"></i></div>
-  <div class="col col-lg-5 col-md-9 col-sm-6 col-12"><h3>MISSION</h3><h4></h4></div>
-
-</div>
-<div class="col col-lg-7 col-md-7 col-sm-6 col-12"><h4 class="text">
-  At KFT, we utilize our global sourcing expertise to provide diverse and sustainable machinery to give our customers the most compelling experience possible.
-</h4></div> 
-   </div>
-   <hr>
-   <div class="row aboutrows">
-    <!-- <div class="col col-lg-6 col-md-3 col-sm-3 col-3"></div> -->
-    <div  class="col col-lg-5 col-md-9 col-sm-5 col-12 visionHover">
-
-    <div class="col col-lg-5 col-md-3 col-sm-5 col-12"><img src="vision.png" class="vision"></i></div>
-    <div class="col col-lg-5 col-md-5 col-sm-6 col-12"><h3>VISION</h3><h4></h4></div>
-    </div>
-    <div class="col col-lg-7 col-md-3 col-sm-6 col-12"><h4 class="text">
-      To be the leader in the second-hand market with a large offering that can cover the need of different clients.
-    </h4> </div> 
-
-       </div>
-       <hr>
-   <div class="row aboutrows">
-    <!-- <div class="col col-lg-6 col-md-3 col-sm-3 col-3"></div> -->
-    <div  class="col col-lg-5 col-md-9 col-sm-5 col-12 valueHover">
-
-    <div class="col col-lg-5 col-md-3 col-sm-5 col-12"><img src="values.png" class="value"></i></div>
-    <div class="col col-lg-5 col-md-5 col-sm-6 col-12"><h3>VALUES</h3><h4></h4></div>
-    </div>
-    <div class="col col-lg-7 col-md-3 col-sm-6 col-12"><h4 class="text lastText">
-      To Operate legally and safely; and promote ethical behavior in all relationships.
-    </h4></div> 
-
-  </div>
-   </div>
-  </div>
-  <div class="col col-lg6 col-md-6 col-sm-12 col-12"><img class="about" src="about us.jpg" alt=""></div>
-</div>
-
-  </section>
-  <section class="contact" id="contact">
-    <h2 class="contactTitle">CONTACT US</h2>
-    <div class="row">
-      
-      <div class="col col-lg-4 col-md-4 col-sm-4 col-4"><p class="contacttext"></p></div>
-      <div class="col col-lg-4 col-md-4 col-sm-4 col-4"><p class="contacttext"></p></div>
-      <div class="col col-lg-4 col-md-4 col-sm-4 col-4"><p class="contacttext"></p></div>
-    </div>
-  </section>
-  
-  <footer>
-   
-    <p class="copyright"> ©️ 
-      All rights reserved. 2023 </p>
-  </footer>
-
-  <script>
-
-    
-
-  
-
-
-  
-
-    if ($(window).width() >= 992) {
-
-   
-window.addEventListener('scroll',function(){
-  const text=document.querySelectorAll('.text-image-section');
-   let ind=0;
-   for(ind;ind<text.length;ind++){
-let textBottom=text[ind].getBoundingClientRect().bottom;
-if(textBottom>=1&&textBottom<=window.innerHeight-10){
-  text[ind].style.animation= `fade 1.5s`;
-}else{
-  text[ind].style.animation='none';
-}
-   } 
-});
-
-
-
-
-  const header= document.querySelector('header');
-    const links=document.querySelectorAll('.a');
-    window.addEventListener('scroll',function(){
-      const scrollY= window.scrollY;
-      
-      let inde=0;
-      for(inde;inde<links.length;inde++){
-      if(scrollY>100){
-      header.classList.add('nav-colored');
-      links[inde].classList.add('active');
-    }else{
-      header.classList.remove('nav-colored');
-      links[inde].classList.remove('active');
-    }
-  }
-    });
-  
-
-
-
-const mission = document.querySelector('.missionHover');
-
-mission.addEventListener('mouseover', function() {
-  document.querySelector('.mission').setAttribute('src', 'mission white.png');
-});
-
-mission.addEventListener('mouseout', function() {
-  document.querySelector('.mission').setAttribute('src', 'mission.png');
-});
-
-
-const vision = document.querySelector('.visionHover');
-
-  vision.addEventListener('mouseover', (function() {
-    
-      document.querySelector('.vision').setAttribute('src', 'vision white.png');
-      
-    
-  }));
-  
-  vision.addEventListener('mouseout', (function() {
-   
-      document.querySelector('.vision').setAttribute('src', 'vision.png'); 
-      
-    
-  }));
-
-
-const value = document.querySelector('.valueHover');
-  value.addEventListener('mouseover', (function(index) {
-   
-      document.querySelector('.value').setAttribute('src', 'values white.png');
-      
-    
-  }));
-  
-  value.addEventListener('mouseout', (function(index) {
- 
-      document.querySelector('.value').setAttribute('src', 'values.png'); 
-      
-    
-  }));
-}
-let var1;
-if($(window).width() >= 1580){ var1=700;}
-else if(($(window).width() >= 992&&$(window).width()<1580)) { var1=600;}
-else if(($(window).width() <= 992&&$(window).width()>600)) { var1=700;}
-else if($(window).width()<=600) { var1=600;}
-
-const arrowTop=document.querySelector('.arrowtop');
-const section2= document.querySelector('#section-2');
-window.addEventListener('scroll',function(){
-const section2position=section2.getBoundingClientRect().top;
-
-if(section2position<var1){
-  arrowTop.style.display='block';
-}else{
-  arrowTop.style.display='none';
-
-}
-});
-
-
-
-  </script>
 </body>
 
 </html>
